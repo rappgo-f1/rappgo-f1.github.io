@@ -1,40 +1,8 @@
-/* Font Integration */
-.inter-title {
-    font-family: "Inter", sans-serif;
-    font-weight: 700; /* Bold for titles */
-    font-size: 1.5rem;
-    line-height: 1.2;
-}
-
-.inter-body {
-    font-family: "Inter", sans-serif;
-    font-weight: 400; /* Normal weight for body text */
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.inter-button {
-    font-family: "Inter", sans-serif;
-    font-weight: 500; /* Medium weight for buttons */
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 1.2;
-}
-
-.inter-link {
-    font-family: "Inter", sans-serif;
-    font-weight: 300; /* Light for links */
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #888;
-    text-decoration: none;
-}
-
+/* General Body Styles */
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background-color: black;
+    background-color: black; /* Ensure black background */
     color: white;
     display: flex;
     justify-content: center;
@@ -42,12 +10,7 @@ body {
     height: 100vh;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+/* Card Styles */
 .card {
     background-color: #111;
     border-radius: 20px;
@@ -58,20 +21,30 @@ body {
     margin: auto;
 }
 
+/* Logo */
 .logo {
     width: 80px;
     margin-bottom: 20px;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
+/* Typography */
+.inter-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 1.5rem;
+    line-height: 1.2;
 }
 
-button {
+.inter-body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400; /* Normal */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Buttons */
+button, a {
+    display: block;
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -79,31 +52,42 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: "Inter", sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 1rem;
 }
 
-button:hover {
+button:hover, a:hover {
     background-color: #666;
 }
 
-.actions button {
-    width: calc(100% - 20px);
-    margin: 5px 10px;
+/* Links */
+.create-account {
+    font-size: 0.9em;
+    color: #888;
+    text-decoration: none;
 }
 
+.create-account:hover {
+    text-decoration: underline;
+}
+
+/* Additional Styles */
 .floor-image {
     width: 100%;
     border-radius: 10px;
     margin: 20px 0;
 }
 
-.scan-button, .share-button {
+.actions button {
+    margin: 5px 0;
+}
+
+.scan-button {
     background-color: #555;
 }
 
-@media screen and (max-width: 400px) {
-    .card {
-        max-width: 90%;
-    }
-}
