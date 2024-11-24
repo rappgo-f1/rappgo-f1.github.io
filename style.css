@@ -1,0 +1,109 @@
+/* Font Integration */
+.inter-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700; /* Bold for titles */
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.inter-body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400; /* Normal weight for body text */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.inter-button {
+    font-family: "Inter", sans-serif;
+    font-weight: 500; /* Medium weight for buttons */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+}
+
+.inter-link {
+    font-family: "Inter", sans-serif;
+    font-weight: 300; /* Light for links */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #888;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #111;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+.actions button {
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+}
+
+.floor-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.scan-button, .share-button {
+    background-color: #555;
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        max-width: 90%;
+    }
+}
