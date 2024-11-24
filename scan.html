@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Receipt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card scan-page">
+        <img src="https://rappgo.se/wp-content/uploads/2023/06/rappgo-logo-1.png" alt="Rappgo Logo" class="logo">
+        <h1 class="inter-title">Scan or Upload Receipt</h1>
+        <form id="receipt-form" onsubmit="handleFormSubmit(event)">
+            <!-- File Input -->
+            <div class="input-group">
+                <label for="receipt-input" class="inter-body">Attach your receipt:</label>
+                <input type="file" id="receipt-input" accept="image/*" capture="environment" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="inter-button">Send</button>
+        </form>
+    </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+            // Add logic for handling the uploaded file if needed
+            // Redirect to DPP.html
+            window.location.href = 'DPP.html';
+        }
+    </script>
+</body>
+</html>
