@@ -7,15 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-/* Container Styles */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    min-height: 100vh;
 }
 
 /* Card Styles */
@@ -23,70 +15,79 @@ body {
     background-color: #111;
     border-radius: 20px;
     padding: 20px;
+    text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    max-width: 400px; /* Increase width for better proportions */
     width: 90%;
+    margin: 20px auto;
 }
 
-/* Typography */
-.inter-title {
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
+/* Product Page Specific Styles */
+.product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Add consistent spacing between elements */
 }
 
-.inter-body {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+.product-unique-number {
+    margin-top: 10px;
     font-size: 1rem;
+    color: #888;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+.floor-image {
+    max-width: 100%;
+    height: auto; /* Prevent image distortion */
+    border-radius: 10px;
     margin: 10px 0;
+    object-fit: contain; /* Keeps the aspect ratio intact */
+}
+
+/* Button Container */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between buttons */
+    width: 100%;
 }
 
 /* Buttons */
-button, a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+button {
     background-color: #444;
     color: white;
     border: none;
     border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
+    width: 100%; /* Ensure buttons take full width */
 }
 
-button:hover, a:hover {
+button:hover {
     background-color: #666;
 }
 
-/* Popup Overlay */
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Opaque background */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+/* Responsive Adjustments */
+@media screen and (min-width: 768px) {
+    .card {
+        max-width: 600px; /* Increase card size for larger screens */
+    }
 
-/* Popup Modal */
-.popup-modal {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    max-width: 300px;
-    width: 90%;
-    color: white;
+    .product-name {
+        font-size: 2rem; /* Larger font for titles on PCs */
+    }
+
+    button {
+        font-size: 1.2rem; /* Larger buttons on PCs */
+    }
 }
