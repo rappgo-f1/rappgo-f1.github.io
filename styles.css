@@ -10,6 +10,7 @@ body {
     height: 100vh;
 }
 
+/* Container Styles */
 .container {
     display: flex;
     justify-content: center;
@@ -41,7 +42,7 @@ body {
     margin: 10px 0;
 }
 
-/* Button Styles */
+/* Buttons */
 button, a {
     display: block;
     width: 100%;
@@ -64,30 +65,28 @@ button:hover, a:hover {
     background-color: #666;
 }
 
-.create-account {
-    font-size: 0.9rem;
-    color: #888;
-}
-
-/* Popup Styles */
-.popup {
+/* Popup Overlay */
+.popup-overlay {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Opaque background */
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
-.popup-content {
+/* Popup Modal */
+.popup-modal {
     background: #222;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    width: 90%;
     color: white;
 }
