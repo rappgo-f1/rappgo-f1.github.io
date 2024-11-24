@@ -91,3 +91,23 @@ button:hover {
         font-size: 1.2rem; /* Larger buttons on PCs */
     }
 }
+
+/* General Styles */
+.expandable-content {
+    display: none; /* Initially hidden */
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin-top: -10px; /* Slight overlap with the button */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.expandable-button {
+    position: relative;
+    z-index: 1; /* Ensure buttons remain above other content */
+}
+
