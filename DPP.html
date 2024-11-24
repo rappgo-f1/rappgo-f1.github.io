@@ -14,14 +14,45 @@
         <img src="https://rappgo.se/wp-content/uploads/2023/06/rappgo-logo-1.png" alt="Rappgo Logo" class="logo">
         <p class="inter-body product-unique-number">Unique number: 1</p>
         <h2 class="inter-title product-name">Oak, 80×220<br>35sqm</h2>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/015/079/703/small_2x/wood-flooring-installation-fixing-parquets-on-floor-3d-illustration-about-construction-png.png" alt="Flooring Image" class="floor-image">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/015/079/703/small_2x/wood-flooring-installation-fixing-parquets-on-floor-3d-illustration-about-construction-png.png" 
+             alt="Flooring Image" class="floor-image">
         <div class="actions">
-            <button class="inter-button">Warranty</button>
-            <button class="inter-button">CO2 emissions</button>
-            <button class="inter-button">Services</button>
-            <button class="inter-button">Contact us</button>
-            <button class="inter-button">Share</button>
+            <button class="inter-button expandable-button" onclick="toggleContent('warranty')">Warranty</button>
+            <div id="warranty" class="expandable-content">
+                <p>Our warranty covers your flooring for 10 years under normal use conditions.</p>
+            </div>
+
+            <button class="inter-button expandable-button" onclick="toggleContent('co2')">CO2 Emissions</button>
+            <div id="co2" class="expandable-content">
+                <p>Rappgo flooring is produced with 30% lower CO2 emissions compared to industry standards.</p>
+            </div>
+
+            <button class="inter-button expandable-button" onclick="toggleContent('services')">Services</button>
+            <div id="services" class="expandable-content">
+                <p>We offer professional installation and regular maintenance services for your floors.</p>
+            </div>
+
+            <button class="inter-button expandable-button" onclick="toggleContent('contact')">Contact Us</button>
+            <div id="contact" class="expandable-content">
+                <p>Have questions? Reach out to our team at contact@rappgo.com or call us at +123456789.</p>
+            </div>
+
+            <button class="inter-button expandable-button" onclick="toggleContent('share')">Share</button>
+            <div id="share" class="expandable-content">
+                <p>Share your experience with Rappgo flooring on social media using #RappgoFloors!</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
