@@ -13,12 +13,20 @@
     <div class="card">
         <img src="https://rappgo.se/wp-content/uploads/2023/06/rappgo-logo-1.png" alt="Rappgo Logo" class="logo">
         <h1 class="inter-title">Sign-in</h1>
-        <form action="welcome.html">
-            <input type="text" placeholder="Username" required class="inter-body">
-            <input type="password" placeholder="Password" required class="inter-body"><br><br>
-            <button type="submit" class="inter-button">Sign In</button><br><br>
+        <form id="signin-form" onsubmit="handleSignIn(event)">
+            <input type="text" id="username" placeholder="Enter your name" required class="inter-body">
+            <input type="password" placeholder="Password" required class="inter-body">
+            <button type="submit" class="inter-button">Sign In</button>
         </form>
-        <button type="submit" class="inter-button">Create new account</button>
     </div>
+
+    <script>
+        function handleSignIn(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value; // Get the username
+            localStorage.setItem('username', username); // Save the name in localStorage
+            window.location.href = 'welcome.html'; // Redirect to welcome page
+        }
+    </script>
 </body>
 </html>
