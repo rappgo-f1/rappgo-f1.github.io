@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Main Card -->
     <div class="card">
         <img src="https://rappgo.se/wp-content/uploads/2023/06/rappgo-logo-1.png" alt="Rappgo Logo" class="logo">
         <h1 class="inter-title">Rappgo Wooden Floorings</h1>
@@ -33,17 +34,17 @@
     </div>
 
     <script>
-        // Show the popup after a delay
-        window.onload = function() {
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.classList.remove('show'); /* Hide the popup */
+        }
+
+        window.onload = function () {
             setTimeout(() => {
-                document.getElementById('popup').style.display = 'flex';
+                const popup = document.getElementById('popup');
+                popup.classList.add('show'); /* Show the popup after delay */
             }, 2000);
         };
-
-        // Function to close the popup
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
     </script>
 </body>
 </html>
