@@ -14,8 +14,11 @@
         <img src="https://rappgo.se/wp-content/uploads/2023/06/rappgo-logo-1.png" alt="Rappgo Logo" class="logo">
         <h1 class="inter-title">Sign-in</h1>
         <form id="signin-form" onsubmit="handleSignIn(event)">
+            <!-- Input for username -->
             <input type="text" id="username" placeholder="Enter your name" required class="inter-body">
+            <!-- Password field -->
             <input type="password" placeholder="Password" required class="inter-body">
+            <!-- Submit button -->
             <button type="submit" class="inter-button">Sign In</button>
         </form>
     </div>
@@ -23,9 +26,17 @@
     <script>
         function handleSignIn(event) {
             event.preventDefault(); // Prevent form submission
+
             const username = document.getElementById('username').value; // Get the username
-            localStorage.setItem('username', username); // Save the name in localStorage
-            window.location.href = 'welcome.html'; // Redirect to welcome page
+            if (username) {
+                // Save the username in localStorage
+                localStorage.setItem('username', username);
+
+                // Redirect to welcome.html
+                window.location.href = 'welcome.html';
+            } else {
+                alert('Please enter your name!');
+            }
         }
     </script>
 </body>
