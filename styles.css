@@ -92,22 +92,25 @@ button:hover {
     }
 }
 
-/* General Styles */
+/* Expandable Content */
 .expandable-content {
-    display: none; /* Initially hidden */
+    max-height: 0; /* Start closed */
+    overflow: hidden; /* Hide content that exceeds max-height */
     background-color: #222;
     color: white;
-    padding: 10px;
+    padding: 0 10px; /* Horizontal padding only, to prevent height issues */
     margin-top: -10px; /* Slight overlap with the button */
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #444;
     font-size: 0.9rem;
     text-align: left;
+    transition: max-height 0.4s ease, padding 0.4s ease; /* Smooth animation */
 }
 
 .expandable-button {
     position: relative;
     z-index: 1; /* Ensure buttons remain above other content */
 }
+
 
